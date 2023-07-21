@@ -1,0 +1,23 @@
+# Teramind
+teramind.com
+*.teramind.com
+
+# Veriato
+veriato.com
+*.veriato.com
+
+# Hubstaff
+hubstaff.com
+*.hubstaff.com
+
+# ActivTrak
+activtrak.com
+*.activtrak.com
+
+# Workpuls
+workpuls.com
+*.workpuls.com
+
+# Time Doctor
+timedoctor.com
+*.timedoctor.com
