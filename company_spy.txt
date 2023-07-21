@@ -21,3 +21,11 @@ workpuls.com
 # Time Doctor
 timedoctor.com
 *.timedoctor.com
+
+# Block Zscaler Employee Monitoring Service Domains
+employees.zscaler.com
+monitoring.zscaler.com
+tracking.zscaler.com
+employee-tracking.zscaler.com
+*.zscaler-monitoring.com
+*.zscaler-tracking.com
