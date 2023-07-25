@@ -1,0 +1,428 @@
+bind_host: 0.0.0.0
+bind_port: 8080
+beta_bind_port: 0
+users:
+- name: jc
+  password: $2a$10$IAIzi46wWqwORsf5egDQleoz5soaTNhsiS8a1QWTPP/o2elVb29rK
+auth_attempts: 5
+block_auth_min: 15
+http_proxy: ""
+language: ""
+rlimit_nofile: 0
+debug_pprof: false
+web_session_ttl: 720
+dns:
+  bind_hosts:
+  - 0.0.0.0
+  port: 53
+  statistics_interval: 1
+  querylog_enabled: true
+  querylog_file_enabled: true
+  querylog_interval: 7
+  querylog_size_memory: 1000
+  anonymize_client_ip: false
+  protection_enabled: true
+  blocking_mode: default
+  blocking_ipv4: ""
+  blocking_ipv6: ""
+  blocked_response_ttl: 10
+  parental_block_host: family-block.dns.adguard.com
+  safebrowsing_block_host: standard-block.dns.adguard.com
+  ratelimit: 20
+  ratelimit_whitelist: []
+  refuse_any: true
+  upstream_dns:
+  - https://doh.libredns.gr/ads
+  - https://dns.adguard-dns.com/dns-query
+  - https://dns.nextdns.io/2bc15e
+  upstream_dns_file: ""
+  bootstrap_dns:
+  - 9.9.9.10
+  - 149.112.112.10
+  - 2620:fe::10
+  - 2620:fe::fe:10
+  all_servers: true
+  fastest_addr: false
+  allowed_clients: []
+  disallowed_clients:
+  - 127.0.0.1
+  blocked_hosts:
+  - version.bind
+  - id.server
+  - hostname.bind
+  cache_size: 4194304
+  cache_ttl_min: 0
+  cache_ttl_max: 0
+  bogus_nxdomain: []
+  aaaa_disabled: false
+  enable_dnssec: false
+  edns_client_subnet: false
+  max_goroutines: 300
+  ipset: []
+  filtering_enabled: true
+  filters_update_interval: 24
+  parental_enabled: true
+  safesearch_enabled: true
+  safebrowsing_enabled: true
+  safebrowsing_cache_size: 1048576
+  safesearch_cache_size: 1048576
+  parental_cache_size: 1048576
+  cache_time: 30
+  rewrites: []
+  blocked_services:
+  - qq
+  - ok
+  - weibo
+  - wechat
+  - viber
+  - tinder
+  - 9gag
+  - mail_ru
+  - vk
+  - dailymotion
+  - disneyplus
+  - whatsapp
+  - imgur
+  - skype
+  - cloudflare
+  - instagram
+  - pinterest
+  - telegram
+  local_domain_name: lan
+  resolve_clients: false
+  local_ptr_upstreams: []
+tls:
+  enabled: false
+  server_name: ""
+  force_https: false
+  port_https: 443
+  port_dns_over_tls: 853
+  port_dns_over_quic: 784
+  port_dnscrypt: 0
+  dnscrypt_config_file: ""
+  allow_unencrypted_doh: false
+  strict_sni_check: false
+  certificate_chain: ""
+  private_key: ""
+  certificate_path: ""
+  private_key_path: ""
+filters:
+- enabled: true
+  url: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
+  name: AdGuard DNS filter
+  id: 1
+- enabled: true
+  url: https://adaway.org/hosts.txt
+  name: AdAway Default Blocklist
+  id: 2
+- enabled: true
+  url: https://www.malwaredomainlist.com/hostslist/hosts.txt
+  name: MalwareDomainList.com Hosts List
+  id: 4
+- enabled: true
+  url: https://someonewhocares.org/hosts/zero/hosts
+  name: Dan Pollock's List
+  id: 1647683653
+- enabled: true
+  url: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt
+  name: Game Console Adblock List
+  id: 1647683654
+- enabled: true
+  url: https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&showintro=1&mimetype=plaintext
+  name: Peter Lowe's List
+  id: 1647683655
+- enabled: true
+  url: https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt
+  name: Perflyst and Dandelion Sprout's Smart-TV Blocklist
+  id: 1647683656
+- enabled: true
+  url: https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt
+  name: WindowsSpyBlocker - Hosts spy rules
+  id: 1647683657
+- enabled: true
+  url: https://abp.oisd.nl/
+  name: "1"
+  id: 1647683658
+- enabled: true
+  url: https://hblock.molinero.dev/hosts_adblock.txt
+  name: "2"
+  id: 1647683661
+- enabled: true
+  url: https://hblock.molinero.dev/hosts
+  name: "3"
+  id: 1647683662
+- enabled: true
+  url: https://hblock.molinero.dev/hosts_domains.txt
+  name: "4"
+  id: 1647683663
+- enabled: true
+  url: https://raw.githubusercontent.com/kboghdady/youTube_ads_4_pi-hole/master/youtubelist.txt
+  name: youtube
+  id: 1647688132
+- enabled: true
+  url: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+  name: youtube2
+  id: 1647688133
+- enabled: true
+  url: https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt
+  name: "5"
+  id: 1647688136
+- enabled: true
+  url: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Spam/hosts
+  name: "6"
+  id: 1647688137
+- enabled: true
+  url: https://v.firebog.net/hosts/static/w3kbl.txt
+  name: "7"
+  id: 1647688138
+- enabled: true
+  url: https://raw.githubusercontent.com/matomo-org/referrer-spam-blacklist/master/spammers.txt
+  name: "8"
+  id: 1647688139
+- enabled: true
+  url: https://raw.githubusercontent.com/VeleSila/yhosts/master/hosts
+  name: "9"
+  id: 1647688140
+- enabled: true
+  url: https://winhelp2002.mvps.org/hosts.txt
+  name: "10"
+  id: 1647688141
+- enabled: true
+  url: https://v.firebog.net/hosts/neohostsbasic.txt
+  name: "11"
+  id: 1647688142
+- enabled: true
+  url: https://raw.githubusercontent.com/RooneyMcNibNug/pihole-stuff/master/SNAFU.txt
+  name: "12"
+  id: 1647688143
+- enabled: true
+  url: https://paulgb.github.io/BarbBlock/blacklists/hosts-file.txt
+  name: "13"
+  id: 1647688144
+- enabled: true
+  url: https://hostsfile.mine.nu/hosts0.txt
+  name: "14"
+  id: 1647688145
+- enabled: true
+  url: https://v.firebog.net/hosts/BillStearns.txt
+  name: "15"
+  id: 1647688146
+- enabled: true
+  url: https://hostsfile.org/Downloads/hosts.txt
+  name: "16"
+  id: 1647688147
+- enabled: true
+  url: https://www.joewein.net/dl/bl/dom-bl-base.txt
+  name: "17"
+  id: 1647688148
+- enabled: true
+  url: https://v.firebog.net/hosts/Kowabit.txt
+  name: "18"
+  id: 1647688149
+- enabled: true
+  url: https://adblock.mahakala.is
+  name: "19"
+  id: 1647688150
+- enabled: true
+  url: https://v.firebog.net/hosts/AdguardDNS.txt
+  name: "20"
+  id: 1647688151
+- enabled: true
+  url: https://v.firebog.net/hosts/Admiral.txt
+  name: "21"
+  id: 1647688152
+- enabled: true
+  url: https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
+  name: "22"
+  id: 1647688153
+- enabled: true
+  url: https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
+  name: "23"
+  id: 1647688154
+- enabled: true
+  url: https://v.firebog.net/hosts/Easylist.txt
+  name: "24"
+  id: 1647688155
+- enabled: true
+  url: https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext
+  name: "25"
+  id: 1647688156
+- enabled: true
+  url: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/UncheckyAds/hosts
+  name: "26"
+  id: 1647688157
+- enabled: true
+  url: https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts
+  name: "27"
+  id: 1647688158
+- enabled: true
+  url: https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts
+  name: "28"
+  id: 1647688159
+- enabled: true
+  url: https://v.firebog.net/hosts/Easyprivacy.txt
+  name: "29"
+  id: 1647688160
+- enabled: true
+  url: https://v.firebog.net/hosts/Prigent-Ads.txt
+  name: "30"
+  id: 1647688161
+- enabled: true
+  url: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.2o7Net/hosts
+  name: "31"
+  id: 1647688162
+- enabled: true
+  url: https://hostfiles.frogeye.fr/firstparty-trackers-hosts.txt
+  name: "32"
+  id: 1647688163
+- enabled: true
+  url: https://hostfiles.frogeye.fr/multiparty-trackers-hosts.txt
+  name: "33"
+  id: 1647688164
+- enabled: true
+  url: https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt
+  name: "34"
+  id: 1647688165
+- enabled: true
+  url: https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/android-tracking.txt
+  name: "35"
+  id: 1647688166
+- enabled: true
+  url: https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-blocklist.txt
+  name: "36"
+  id: 1647688167
+- enabled: true
+  url: https://raw.githubusercontent.com/Kees1958/W3C_annual_most_used_survey_blocklist/6b8c2411f22dda68b0b41757aeda10e50717a802/TOP_EU_US_Ads_Trackers_HOST
+  name: "37"
+  id: 1647688169
+- enabled: true
+  url: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt
+  name: "38"
+  id: 1647688170
+- enabled: true
+  url: https://osint.digitalside.it/Threat-Intel/lists/latestdomains.txt
+  name: "39"
+  id: 1647688171
+- enabled: true
+  url: https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt
+  name: "40"
+  id: 1647688172
+- enabled: true
+  url: https://v.firebog.net/hosts/Prigent-Crypto.txt
+  name: "41"
+  id: 1647688173
+- enabled: true
+  url: https://bitbucket.org/ethanr/dns-blacklists/raw/8575c9f96e5b4a1308f2f12394abd86d0927a4a0/bad_lists/Mandiant_APT1_Report_Appendix_D.txt
+  name: "42"
+  id: 1647688174
+- enabled: true
+  url: https://phishing.army/download/phishing_army_blocklist_extended.txt
+  name: "43"
+  id: 1647688175
+- enabled: true
+  url: https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt
+  name: "44"
+  id: 1647688176
+- enabled: true
+  url: https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt
+  name: "45"
+  id: 1647688177
+- enabled: true
+  url: https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Risk/hosts
+  name: "46"
+  id: 1647688178
+- enabled: false
+  url: https://urlhaus.abuse.ch/downloads/hostfile/
+  name: "47"
+  id: 1647688179
+- enabled: true
+  url: https://v.firebog.net/hosts/Prigent-Malware.txt
+  name: "48"
+  id: 1647688180
+- enabled: true
+  url: https://v.firebog.net/hosts/Shalla-mal.txt
+  name: "49"
+  id: 1647688181
+- enabled: true
+  url: https://raw.githubusercontent.com/tg12/pihole-phishtank-list/master/list/phish_domains.txt
+  name: "50"
+  id: 1647688183
+- enabled: true
+  url: https://raw.githubusercontent.com/HorusTeknoloji/TR-PhishingList/master/url-lists.txt
+  name: "51"
+  id: 1647688184
+- enabled: true
+  url: https://zerodot1.gitlab.io/CoinBlockerLists/hosts_browser
+  name: "52"
+  id: 1647688185
+- enabled: true
+  url: https://raw.githubusercontent.com/kboghdady/youTube_ads_4_pi-hole/master/crowed_list.txt
+  name: youtube 2
+  id: 1647688189
+- enabled: true
+  url: https://raw.githubusercontent.com/Ewpratten/youtube_ad_blocklist/master/blocklist.txt
+  name: youtube 3
+  id: 1647688190
+whitelist_filters:
+- enabled: true
+  url: https://raw.githubusercontent.com/bahree/pihole-lists/main/whitelist.txt
+  name: 1 fb
+  id: 1647688188
+user_rules:
+- '@@||unagi-na.amazon.com^$important'
+- '@@||unagi-na.amazon.com^$client=''192.168.1.187'''
+- '@@||fls-na.amazon.com^$important'
+- '@@||connect.facebook.net^$important'
+- '@@||log-upload-os.mihoyo.com^$important'
+- '@@||us-east-1.ingaa.xyz^$important'
+- '@@||www.amazon.com^$important'
+- '@@||snowplow-pixel.tradingview.com^$important'
+- '@@||telemetry.tradingview.com^$important'
+- '@@||www.tradingview.com^$important'
+- '@@||www.speedtest.net^$important'
+- '@@||www.callofduty.com^$important'
+- '@@||d3h5bk8iotgjvw.cloudfront.net^$important'
+- '@@||stackoverflow.com^$important'
+- '@@||shealth-analytics-api.samsunghealth.com^$important'
+- '@@||binph5o7ub3514q463qh26549.litix.io^$important'
+- '@@||data.emb-api.com^$important'
+- '@@||api.onesignal.com^$important'
+- '@@||beacons4.gvt2.com^$important'
+- '@@||api.us-east-1.aiv-delivery.net^$important'
+- '@@||internal-api.snapkit.com^$important'
+- '@@||api.snapkit.com^$important'
+- '@@||api.snapkit.com^$client=''192.168.1.230'''
+- '@@||app-analytics-v2.snapchat.com^$important'
+- '@@||mqtt-mini.facebook.com^$important'
+- '@@||branch.io'
+- '@@||scribe.logs.roku.com^$important'
+- '@@||firebaseinstallations.googleapis.com^$important'
+- '@@||unpkg.com^$important'
+- '@@||eec.crunchyroll.com^$client=''192.168.1.62'''
+- '@@||eec.crunchyroll.com^$important'
+- ""
+dhcp:
+  enabled: false
+  interface_name: ""
+  dhcpv4:
+    gateway_ip: ""
+    subnet_mask: ""
+    range_start: ""
+    range_end: ""
+    lease_duration: 86400
+    icmp_timeout_msec: 1000
+    options: []
+  dhcpv6:
+    range_start: ""
+    lease_duration: 86400
+    ra_slaac_only: false
+    ra_allow_slaac: false
+clients: []
+log_compress: false
+log_localtime: false
+log_max_backups: 0
+log_max_size: 100
+log_max_age: 3
+log_file: ""
+verbose: false
+schema_version: 10
