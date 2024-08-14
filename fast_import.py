@@ -9,9 +9,9 @@ import json
 # "http(s)://<adguardHomeIp:<port>"
 host = "http://192.168.1.22:80"
 # Username
-userName = "jc"
+userName = ""
 # Password
-password = "!June@0164"
+password = ""
 
 # Block list
 # Taken from Wally3K's Firebog https://firebog.net/
